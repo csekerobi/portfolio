@@ -1,0 +1,227 @@
+/* variables */
+:root {
+  /* colors */
+  --color-dominant: #2c3e50;
+  --color-secondary: #bdc3c7;
+  --color-accent: #8f88c0;
+
+  /* fonts */
+  --fontfamily-heading: "Oswald", monospace;
+  --fontfamily-base: "Source Code Pro", serif;
+  /* font sizes */
+  --font-title: 4.5rem; /* 72px */
+  --font-subtitle: 3.5rem; /* 56px */
+  --font-card-title: 2.5rem; /* 40px */
+  --font-paragraph: 1.5rem; /* 24px */
+  --font-small: 1.125rem; /* 18px */
+
+  /* shadow */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* genereal styles */
+body {
+  background-color: var(--color-dominant);
+  color: var(--color-secondary);
+  font-family: var(--fontfamily-base);
+  font-size: var(--font-paragraph);
+}
+/* different font for headings */
+.title,
+.card-title,
+.about-title,
+.projects-title,
+.footer-title {
+  font-family: var(--fontfamily-heading);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-dominant);
+}
+.nav-link {
+  font-family: var(--fontfamily-base);
+  font-size: var(--font-small);
+  color: var(--color-secondary);
+}
+.nav-link:hover {
+  color: var(--color-accent);
+}
+.navbar-toggler {
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Hero */
+.title {
+  font-weight: bold;
+  font-size: var(--font-title);
+  /* adding gradient on title */
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-secondary),
+    var(--color-dominant)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  font-size: var(--font-subtitle);
+}
+.img-col {
+  max-width: 450px;
+  max-height: 450px;
+}
+img {
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+}
+.contact-btn {
+  font-size: var(--font-paragraph);
+  background-color: var(--color-accent);
+  color: var(--color-dominant);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-accent);
+}
+.contact-btn:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  transition: 0.5s;
+}
+@media (max-width: 576px) {
+  #home .greeting {
+    text-align: center; /* center text on small screens */
+  }
+}
+
+/* Projects */
+#projects {
+  margin: 150px auto;
+}
+.projects-title {
+  color: var(--color-accent);
+  font-size: var(--font-subtitle);
+}
+.projects-text {
+  font-size: var(--font-paragraph);
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-dominant);
+  border: none;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  color: var(--color-secondary);
+}
+.card-title {
+  font-size: var(--font-card-title);
+  margin-bottom: 8px;
+}
+.card-text {
+  font-size: var(--font-paragraph);
+}
+.card-link {
+  font-size: var(--font-small);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.card-link:hover {
+  color: var(--color-secondary);
+}
+.project-tech-icons i {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .project-img {
+    height: 250px;
+  }
+}
+
+/* About Section */
+.about-title {
+  color: var(--color-accent);
+  font-size: var(--font-subtitle);
+}
+.about-text {
+  font-size: var(--font-small);
+}
+.about-content {
+  padding-right: 30px;
+}
+@media (min-width: 768px) {
+  .about-content,
+  .skills-container {
+    flex: 1;
+  }
+}
+.skill-item p {
+  font-size: var(--font-small);
+}
+.skill {
+  color: var(--color-accent);
+}
+.skill-container {
+  padding-left: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.skill-item i {
+  font-size: 3rem;
+}
+
+/* Footer */
+.footer-title {
+  font-size: var(--font-subtitle);
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+.footer-link {
+  font-size: var(--font-small);
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.footer-text {
+  font-size: var(--font-small);
+}
+footer i {
+  margin-right: 8px;
+  color: var(--color-accent);
+}
